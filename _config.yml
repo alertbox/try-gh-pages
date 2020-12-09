@@ -1,7 +1,7 @@
 # Site settings
 locale: "en-US"
-baseurl: "/bookworm"
-url: "http://alertbox.github.io"
+baseurl: "/vscode-remote-try-bookworm"
+url: "http://kosalanuwa.github.io"
 
 # Collections
 collections:
@@ -49,8 +49,11 @@ permalink: pretty
 sass:
   style: compressed
 
+remote_theme: alertbox/bookworm
+
 # Gems
 plugins:
+  - jekyll-remote-theme
   - github-pages
   - jemoji
   - jekyll-paginate
