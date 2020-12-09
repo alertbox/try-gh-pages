@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% assign minutes = content | strip_html | number_of_words | divided_by: 180 %}
+{% if minutes == 0 %}
+{% assign minutes = 1 %}
+{% endif %}
+
+<div class="post-header mb2">
+  <h1 class="h2 caps">{{ page.title }}</h1>
+  <span class="post-meta h4">{{ page.scene }}</span><br>
+  <span class="post-meta small">
+    {{ page.minutes | default: minutes }} {{ site.text.post.minute_read | default: "minute read" }}
+  </span>
+</div>
+<article class="post-content py3 justify">
+  {{ content }}
+</article>
+
+{% include chapter_footer.html %}
