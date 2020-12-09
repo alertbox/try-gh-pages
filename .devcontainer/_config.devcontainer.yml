@@ -1,6 +1,6 @@
-url: http://localhost:8004
+url: http://localhost:4749
 baseurl: ""
-repository: alertbox/bookworm
+repository: kosalanuwan/vscode-remote-try-bookworm
 
 # Build settings
 show_drafts: true
