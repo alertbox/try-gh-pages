@@ -27,8 +27,7 @@ gh repo clone kosalanuwan/vscode-remote-try-bookworm
 code vscode-remote-try-bookworm
 ```
 
-## Useful Commands
-Occationally, you will want to repeat below steps to create a static site, add posts and pages, change the theme, write your content, build and publish to GitHub Pages.
+Occationally, you will want to repeat below steps to add posts and pages, change the theme, write your content, build and publish to GitHub Pages.
 
 With VS Code:
 - Run task: `build` to clean build and generate the static site
