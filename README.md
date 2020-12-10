@@ -1,40 +1,41 @@
 # Try out Jekyll-based static site
 
-This repository demonstrates developing a static site with Jekyll using VS  Code and Developer Containers.
+This repository demonstrates developing a GitHub Page with Jekyll remote theme using VS  Code and Developer Containers.
 
 ![Screenshot][screenshot]
 
-> The Bookworm in action.
+> The Bookworm theme in action.
 
 ### What's included:
-- Originally, forked from [@alertbox/bookworm][gh-repo-bookworm-template] template repo
-- Uses [@alertbox/bookworm][gh-repo-bookworm-remote-theme] jekyll remote theme
+- Originally, forked from template repo [@alertbox/bookworm][gh-repo-bookworm-template]
+- Uses Jekyll remote theme [@alertbox/bookworm][gh-repo-bookworm-remote-theme]
 - Uses [Jekyll on Ruby][docs-jekyll-getting-started] for static site generation
 - Configured to [build and run][src-vscode-tasks] from VS Code tasks
-- Configured to [publish][src-gh-workflows] on GitHub Pages using [GitHub Page Actions][gh-repo-gh-pages-actions]
+- Configured to [publish][src-gh-workflows] on `gh-pages` branch using [GitHub Page Actions][gh-repo-gh-pages-actions]
 
 ## Quick Start
-In case you were wondering how Jekyll and GitHub Pages work or you want to build your own static site, you want to have a look at [@alertbox/bookworm][gh-repo-bookworm] repo for full-blown instructions.
-
-If you want to understand how development containers work or you want to build your own development container, you want to have a look at [@kosalanuwan/devcontainers][gh-repo-devcontainers] repo for starters.
+In case you were wondering, [@alertbox/bookworm][gh-repo-bookworm] is a good source of information for full-blown instructions to get started with your own static site, learn how Jekyll and GitHub Pages work.
 
 ### Build and run from source
-First, you want to fork or clone the repo locally, then open up the source code in the remote container.
+First, you want to fork or clone the repo locally, then open up the source code in VS Code.
 
 ```zsh
 #!/bin/zsh
 gh repo clone kosalanuwan/vscode-remote-try-bookworm
 code vscode-remote-try-bookworm
 ```
-
-Occationally, you will want to repeat below steps to add posts and pages, change the theme, write your content, build and publish to GitHub Pages.
+Then, re-open the source in  the development container to install minimal tools, plugins, extensions et al.
 
 With VS Code:
+- Run task: `Reopen in Container`
 - Run task: `build` to clean build and generate the static site
 - Run task: `live-serve` to preview locally
 
+Occationally, you will want to repeat these steps to add posts and pages, change the theme, write your content, build and publish to GitHub Pages.
+
 ## Related Projects
-This sample project uses the [jekyll development container found in @kosalanuwan/devcontainers][gh-repo-devcontainers-jekyll] and the static site source code along with the [remote theme found from @alertbox/bookworm][gh-repo-bookworm-remote-theme].
+- `jekyll` development container found in [@kosalanuwan/devcontainers][gh-repo-devcontainers-jekyll]
+- `bookworm` remote theme source code found in [@alertbox/bookworm][gh-repo-bookworm-remote-theme].
 
 ## Feedback
 
