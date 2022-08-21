@@ -1,6 +1,9 @@
 port: 4000
 url: http://localhost
 
+# baseurl: '' to just use http://localhost:4000.
+baseurl: ''
+
 # Build settings
 show_drafts: true
 future: true
