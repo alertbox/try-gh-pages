@@ -1,7 +1,8 @@
 {
 	"name": "GitHub Pages (Jekyll)",
 	"image": "mcr.microsoft.com/vscode/devcontainers/base:dev-bullseye",
-	
+	"runArgs": [ "--env-file",".devcontainer/devcontainer.env" ],
+
     "workspaceMount": "src=${localWorkspaceFolder},dst=/workspace,type=bind,consistency=cached",
 	"workspaceFolder": "/workspace",
 	
