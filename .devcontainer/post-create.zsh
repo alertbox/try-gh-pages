@@ -2,11 +2,19 @@
 
 ## Install the version of Bundler.
 if [ -f Gemfile.lock ] && grep "BUNDLED WITH" Gemfile.lock > /dev/null; then
-    cat Gemfile.lock | tail -n 2 | grep -C2 "BUNDLED WITH" | tail -n 1 | xargs gem install bundler jekyll github-pages -v
+    cat Gemfile.lock | tail -n 2 | grep -C2 "BUNDLED WITH" | tail -n 1 | xargs gem install bundler -v
 fi
 
 # If there's a Gemfile, then run `bundle install`
 # It's assumed that the Gemfile will install Jekyll too
 if [ -f Gemfile ]; then
     bundle install
+fi
+
+# Install latest jekyll and github-pages for older jekyll
+if command -v jekyll >/dev/null; then
+  echo jekyll exists
+else
+  echo jekyll does not exist
+# gem install jekyll github-pages
 fi
