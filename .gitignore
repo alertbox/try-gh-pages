@@ -10,3 +10,4 @@ _config.gh-pages.yml
 *.gem
 .bundle
 Gemfile.lock
+vendor
