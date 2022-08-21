@@ -8,14 +8,17 @@ fi
 # If there's a Gemfile, then run `bundle install`
 # It's assumed that the Gemfile will install Jekyll too
 if [ -f Gemfile ]; then
-    echo gem file found. installing bundle ...
-    bundle install
+    echo Gem file found. Installing ...
+    bundle install &>/dev/null;
 fi
 
 # Install latest jekyll and github-pages for older jekyll
-if command -v jekyll >/dev/null; then
-  echo jekyll exists
+if (($+commands[jekyll])); then 
+  echo Jekyll exists. &>/dev/null;
+# fi
+# if command -v jekyll >/dev/null; then
+#   echo jekyll exists
 else
-  echo jekyll does not exist. installing jekyll to get started.
-  gem install jekyll github-pages
+  echo Jekyll does not exist. Installing ...
+  gem install jekyll github-pages &>/dev/null;
 fi
