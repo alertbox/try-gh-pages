@@ -1,8 +1,9 @@
-url: http://localhost:4749
-baseurl: ""
-repository: kosalanuwan/vscode-remote-try-bookworm
+port: 4000
+url: http://localhost
 
 # Build settings
 show_drafts: true
 future: true
 unpublished: true
+
+github: [metadata]
