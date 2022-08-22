@@ -21,35 +21,46 @@ Develop [GitHub Pages][github-pages], static sites, and themes with [Jekyll][jek
 
 In this devcontainer, you'll find the files you need to be able to generate a static sites and themes with Jekyll.
 
-To set up your environment to develop static sites and themes, you want a copy of this devcontainer. This repo is marked as a `Template` so you will only have to [Use This Template][use-this], then follow the instructions. Read more about this in the [GitHub Template Repositories][template-repos] document.
+To set up your environment to develop static sites and themes, you want a copy of this devcontainer. Luckily, this repo is marked as a `Template` so you can simply [Use This Template][use-this] yourself without having to install any tools and dependencies via `brew`  and whatnot. You will want to follow this generic pattern:
+
+1. First, you will have to create a GitHub account if you don't have one already. [GitHub's Learning Lab][learning-lab] is a good source of information. Sign in to GitHub using your credentials, otherwise.
+2. Next, [Use This Template][use-this] to create a copy of this repo, then follow the instructions. Read more about this in the [GitHub Template Repositories][template-repos] document.
+3. Once you obtain your own copy of this repo, you will have to rebuild the container. Luckly, even if you are not familiar, these steps should be pretty easy to follow. [Developing in Codespaces using VS Code][use-code-spaces-with-vscode] is a good source of information.
+
+That's it. You now have a Jekyll-enabled minimal devcontainer, and is ready to start working locally or on the cloud.
 
 [use-this]: /generate
+[learning-lab]: https://lab.github.com/
 [template-repos]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
-
-With VS Code:
-
-1. Connect to your repo with [GitHub Codespaces][use-codespaces-with-vscode].
-2. Press `F1` and run `Codespaces: Rebuild Container` to start working with it like you would locally.
-
-Whilst devcontainer should work unmodified, you can [select the version of Debian][devcontainer-tags] and it's [features used][devcontainer-features] by updating the `devcontainer.json`.
-
 [use-codespaces-with-vscode]: https://docs.github.com/en/codespaces/developing-in-codespaces/using-github-codespaces-in-visual-studio-code
+
+>  Whilst devcontainer should work unmodified, you can [select the version of Debian][devcontainer-tags] and it's [features used][devcontainer-features] by updating the `devcontainer.json`.
+
 [devcontainer-tags]: https://mcr.microsoft.com/v2/vscode/devcontainers/base/tags/list
 [devcontainer-features]: https://github.com/microsoft/vscode-dev-containers/tree/main/script-library/docs
 
-## Contributing
-
-The official repo to contribute would be [@microsoft/vscode-dev-devcontainers][gh-vscode-dev-container].
-
-[gh-vscode-dev-container]: https://github.com/microsoft/vscode-dev-containers/#readme
-
 ## Development
 
-To create a Jekyll project, run `jekyll new . --force`. To test your site locally, press `F1` and run task `live-serve`. This starts a Jekyll server and generate your site. You should see the content in your favorite browser at [localhost:4000](http://localhost:4000).
+To create a Jekyll project, run `jekyll new . --force`, and Jekyll will generate a project and its prerequisites in this directory based on [site template][site-template-path].
+
+To test your site locally, press `F1` and run task `live-serve`. This starts a Jekyll server and generate your static site. You should see the content in your favorite browser at [localhost:4000](http://localhost:4000).
 
 To experiment with this devcontainer, you can directly reference [@kosalanuwan's developer journal notes][hashnode-notes-to-self] on Hashnode.
 
+[site-template-path]: https://github.com/jekyll/jekyll/tree/master/lib/site_template
 [hashnode-notes-to-self]: https://notestoself.hashnode.dev/tags/jekyll
+
+## Feedback
+
+If you have technical problems with devcontainers, you are better off [asking GitHub Codespaces Support][codespaces-support] directly, since you'll end up getting a much faster response back that way.
+
+[codespaces-support]: https://support.github.com/features/codespaces
+
+## Contributing
+
+The official repo to contribute would be [@microsoft/vscode-dev-devcontainers][vscode-dev-containers-repo].
+
+[vscode-dev-containers-repo]: https://github.com/microsoft/vscode-dev-containers/#readme
 
 ## License
 
