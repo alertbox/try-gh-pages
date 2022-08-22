@@ -1,7 +1,11 @@
 # Tryout GitHub Pages (Jekyll)
 
-Develop static sites, themes, and GitHub Pages with Jekyll. Include extensions and related dependencies for use with [devcontainers][devcontainers].
+[<img align="right" alt="GitHub Pages" width="128rem" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" />][github-pages]
 
+Develop [GitHub Pages][github-pages], static sites, and themes with [Jekyll][jekyll]. Include extensions and related dependencies for use with [devcontainers][devcontainers].
+
+[github-pages]: https://guides.github.com/features/pages/
+[jekyll]: https://jekyllrb.com/tutorials/video-walkthroughs/
 [devcontainers]: https://containers.dev/
 
 ### What's in it:
