@@ -1,6 +1,8 @@
 # Tryout GitHub Pages (Jekyll)
 
-Develop static sites, themes, and GitHub Pages with Jekyll. Include extensions and related dependencies for use with devcontainers.
+Develop static sites, themes, and GitHub Pages with Jekyll. Include extensions and related dependencies for use with [devcontainers][devcontainers].
+
+[devcontainers]: https://containers.dev/
 
 ### What's in it:
 
@@ -13,20 +15,21 @@ Develop static sites, themes, and GitHub Pages with Jekyll. Include extensions a
 
 ## Usage
 
-In this devcontainer, you'll find the files you need to be able to generate a static site and themes with Jekyll.
+In this devcontainer, you'll find the files you need to be able to generate a static sites and themes with Jekyll.
 
-To set up your environment to develop static sites and themes, you want a copy of this devcontainer. The repo is marked as a `Template` so you will only have to [Use This Template][use-this], then follow the instructions. Read more about this in the [GitHub Template Repositories][template-repos] document.
+To set up your environment to develop static sites and themes, you want a copy of this devcontainer. This repo is marked as a `Template` so you will only have to [Use This Template][use-this], then follow the instructions. Read more about this in the [GitHub Template Repositories][template-repos] document.
 
 [use-this]: /generate
 [template-repos]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
 
 With VS Code:
 
-1. Connect to your repo with GitHub Codespaces.
-2. Press `F1` and run Codespaces: Rebuild Container to start working with it like you would locally.
+1. Connect to your repo with [GitHub Codespaces][use-codespaces-with-vscode].
+2. Press `F1` and run `Codespaces: Rebuild Container` to start working with it like you would locally.
 
 Whilst devcontainer should work unmodified, you can [select the version of Debian][devcontainer-tags] and it's [features used][devcontainer-features] by updating the `devcontainer.json`.
 
+[use-codespaces-with-vscode]: https://docs.github.com/en/codespaces/developing-in-codespaces/using-github-codespaces-in-visual-studio-code
 [devcontainer-tags]: https://mcr.microsoft.com/v2/vscode/devcontainers/base/tags/list
 [devcontainer-features]: https://github.com/microsoft/vscode-dev-containers/tree/main/script-library/docs
 
