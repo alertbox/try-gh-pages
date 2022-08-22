@@ -25,7 +25,7 @@ To set up your environment to develop static sites and themes, you want a copy o
 
 1. First, you will have to create a GitHub account if you don't have one already. [GitHub's Learning Lab][learning-lab] is a good source of information. Sign in to GitHub using your credentials, otherwise.
 2. Next, [Use This Template][use-this] to create a copy of this repo, then follow the instructions. Read more about this in the [GitHub Template Repositories][template-repos] document.
-3. Once you obtain your own copy of this repo, you will have to rebuild the container. Luckly, even if you are not familiar, these steps should be pretty easy to follow. [Developing in Codespaces using VS Code][use-code-spaces-with-vscode] is a good source of information.
+3. Once you obtain your own copy of this repo, you will have to rebuild the container. Luckly, even if you are not familiar, these steps should be pretty easy to follow. [Developing in Codespaces using VS Code][use-codespaces-with-vscode] is a good source of information.
 
 That's it. You now have a Jekyll-enabled minimal devcontainer, and is ready to start working locally or on the cloud.
 
