@@ -34,6 +34,8 @@ That's it. You now have a Jekyll-enabled minimal devcontainer, and is ready to s
 [template-repos]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
 [use-codespaces-with-vscode]: https://docs.github.com/en/codespaces/developing-in-codespaces/using-github-codespaces-in-visual-studio-code
 
+>  **Note**
+>
 >  Whilst devcontainer should work unmodified, you can [select the version of Debian][devcontainer-tags] and it's [features used][devcontainer-features] by updating the `devcontainer.json`.
 
 [devcontainer-tags]: https://mcr.microsoft.com/v2/vscode/devcontainers/base/tags/list
@@ -64,5 +66,5 @@ The official repo to contribute would be [@microsoft/vscode-dev-devcontainers][v
 
 ## License
 
-The devcontainer is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The devcontainer is available as open source under the terms of the [MIT License](LICENSE).
 
