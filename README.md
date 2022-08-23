@@ -34,7 +34,7 @@ That's it. You now have a Jekyll-enabled minimal devcontainer, and is ready to s
 [template-repos]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
 [use-codespaces-with-vscode]: https://docs.github.com/en/codespaces/developing-in-codespaces/using-github-codespaces-in-visual-studio-code
 
->  **Notes**
+>  **Note**
 >
 >  Whilst devcontainer should work unmodified, you can [select the version of Debian][devcontainer-tags] and it's [features used][devcontainer-features] by updating the `devcontainer.json`.
 
