@@ -66,5 +66,5 @@ The official repo to contribute would be [@microsoft/vscode-dev-devcontainers][v
 
 ## License
 
-The devcontainer is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The devcontainer is available as open source under the terms of the [MIT License](LICENSE).
 
