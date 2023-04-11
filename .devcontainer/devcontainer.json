@@ -1,16 +1,9 @@
 {
-	"name": "GitHub Pages (Jekyll)",
-	"image": "mcr.microsoft.com/vscode/devcontainers/base:dev-bullseye",
+	"name": "gh-pages",
 
-	"containerEnv": {
-		"LANG":"en_US.UTF-8",
-		"LANGUAGE":"en_US:en",
-		"TZ":"Etc/UTC",
-		"LC_ALL":"en_US.UTF-8"
-	},
-
-    "workspaceMount": "src=${localWorkspaceFolder},dst=/workspace,type=bind,consistency=cached",
-	"workspaceFolder": "/workspace",
+	// See complete list https://hub.docker.com/_/ruby/tags
+	// GitHub Pages dependencies https://pages.github.com/versions/
+	"image": "ruby:2.7.4-bullseye",
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
@@ -20,57 +13,80 @@
 		35729
 	],
 
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "root",
+	
+    // "workspaceMount": "src=${localWorkspaceFolder},dst=/workspace,type=bind,consistency=cached",
+	// "workspaceFolder": "/workspace",
+	
+	// Add more features. See complete list https://github.com/devcontainers/features
 	"features": {
-		"common": {
-			"username": "automatic",
-			"uid": "automatic",
-			"gid": "automatic",
-			"installZsh": true,
-			"upgradePackages": true
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"configureZshAsDefaultShell": true
 		},
-		// GitHub Pages dependencies https://pages.github.com/versions/
-		"ruby": "2.7.4",
-		"node": {
-			"version": "lts",
-        	"nodeGypDependencies": true
-		},
-		"docker-from-docker": {
-			"version": "latest",
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
 			"moby": false,
 			"dockerDashComposeVersion": "v2"
 		},
-		"github-cli": "latest"
+		"ghcr.io/devcontainers/features/ruby:1": "none",
+		"ghcr.io/devcontainers/features/node:1": {}
 	},
-	// Set *default* container specific settings.json values on container create.
-	"settings": {
-		"terminal.integrated.defaultProfile.linux": "zsh",
-		"editor.formatOnPaste": true,
-		"editor.guides.bracketPairs": "active",
-		"debug.internalConsoleOptions": "neverOpen",
+	"containerEnv": {
+		"LANG":"en_US.UTF-8",
+		"LANGUAGE":"en_US:en",
+		"TZ":"Etc/UTC",
+		"LC_ALL":"en_US.UTF-8"
+	},
 
-		"files.watcherExclude": {
-			"**/_site/**": true
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"rebornix.Ruby",
+				"redhat.vscode-yaml",
+
+				"usernamehw.errorlens",
+				"editorconfig.editorconfig",
+				"esbenp.prettier-vscode",
+
+				"bierner.github-markdown-preview",
+				"streetsidesoftware.code-spell-checker",
+				"znck.grammarly",
+				"redhat.fabric8-analytics",
+				"ms-vscode.wordcount"
+			],
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+
+				"editor.formatOnPaste": true,
+				"editor.guides.bracketPairs": "active",
+				"debug.internalConsoleOptions": "neverOpen",
+
+				"scm.defaultViewMode": "tree",
+
+				"files.watcherExclude": {
+					"**/_site/**": true
+				}
+			}
 		}
 	},
-
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [		
-		"ms-vscode.wordcount",
-		"editorconfig.editorconfig",
-		"esbenp.prettier-vscode",
-		"streetsidesoftware.code-spell-checker",
-        "znck.grammarly",
-		"redhat.fabric8-analytics",
-		"redhat.vscode-yaml",
-		"bierner.github-markdown-preview"
-	],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// Fix for Omnisharp analyzer fail
-	// Read more https://github.com/OmniSharp/omnisharp-vscode/issues/3143#issuecomment-513501863
-	"postCreateCommand": "zsh .devcontainer/post-create.zsh",
-	// "overrideCommand": false,
 	
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	// Use 'updateContentCommand' to run commands after the container is successfully created.
+	"updateContentCommand": { 
+		// Remove imagemagick due to https://security-tracker.debian.org/tracker/CVE-2019-10131
+		"clean": "apt-get purge -y imagemagick imagemagick-6-common",
+		// If there's a Gemfile.lock, then install the version of Bundler from Gemfile.lock.
+		// "install": "gem update --system && cat Gemfile.lock | tail -n 2 | grep -C2 'BUNDLED WITH' | tail -n 1 | xargs gem install bundler -v"
+		"install": "gem update --system && gem install bundler"
+	},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// If there's a Gemfile, then restore
+	// It's assumed that the Gemfile will install Jekyll and GitHub Pages too
+	"postCreateCommand": {
+		"restore": "bundle install"
+	}
 }
