@@ -39,7 +39,7 @@ That's it. You now have a Jekyll-enabled minimal devcontainer, and is ready to s
 >  Whilst devcontainer should work unmodified, you can [select the version of Debian][devcontainer-tags] and it's [features used][devcontainer-features] by updating the `devcontainer.json`.
 
 [devcontainer-tags]: https://mcr.microsoft.com/v2/vscode/devcontainers/base/tags/list
-[devcontainer-features]: https://github.com/microsoft/vscode-dev-containers/tree/main/script-library/docs
+[devcontainer-features]: https://github.com/devcontainers/features
 
 ## Development
 
@@ -47,10 +47,10 @@ To create a Jekyll project, run `jekyll new . --force`, and Jekyll will generate
 
 To test your site locally, press `F1` and run task `live-serve`. This starts a Jekyll server and generate your static site. You should see the content in your favorite browser at [localhost:4000](http://localhost:4000).
 
-To experiment with this devcontainer, you can directly reference [@kosalanuwan's developer journal notes][hashnode-notes-to-self] on Hashnode.
+To experiment with this devcontainer, you can directly reference [@kosalanuwan's developer journal notes][journal-notes].
 
 [site-template-path]: https://github.com/jekyll/jekyll/tree/master/lib/site_template
-[hashnode-notes-to-self]: https://notestoself.hashnode.dev/tags/jekyll
+[journal-notes]: https://keepontruckin.hashnode.dev/tags/jekyll
 
 ## Feedback
 
@@ -60,9 +60,9 @@ If you have technical problems with devcontainers, you are better off [asking Gi
 
 ## Contributing
 
-The official repo to contribute would be [@microsoft/vscode-dev-devcontainers][vscode-dev-containers-repo].
+The official repo to contribute would be [@devcontainers/images][devcontainers-repo].
 
-[vscode-dev-containers-repo]: https://github.com/microsoft/vscode-dev-containers/#readme
+[devcontainers-repo]: https://github.com/devcontainers/images/#readme
 
 ## License
 
